@@ -1,0 +1,19 @@
+<form class="form-inline" method="POST" action="{{ url_for('save_blueprint') }}">
+  <div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon">Please select person ID</span>
+            <select name="comp_select" class="selectpicker form-control">
+              {% for header in headers %}
+              <option value="{{ header }}">{{ header }}</option>
+              {% endfor %}
+            </select>
+        <span class="input-group-addon">Please select sample ID</span>
+            <select name="comp_select2" class="selectpicker form-control">
+              {% for header in headers %}
+              <option value="{{ header }}">{{ header }}</option>
+              {% endfor %}
+            </select>
+    </div>
+    <button type="Save mapping" class="btn btn-default">Go</button>
+  </div>
+</form>
